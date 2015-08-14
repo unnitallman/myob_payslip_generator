@@ -6,6 +6,8 @@
 #  |   D     |   $80,001 - $180,000   |   $17,547 plus 37c for each $1 over $80,000
 #  |   E     |   $180,001 and over    |   $54,547 plus 45c for each $1 over $180,000
 
+require 'ostruct'
+
 class IncomeTaxCalculator
   attr_reader :annual_income
 
@@ -14,8 +16,8 @@ class IncomeTaxCalculator
   end
 
   def calculate
-    t = tax_rate
-    t[:minimum_tax] + (annual_income - t[:lower_limit_of_the_range]) * t[:tax_per_extra_dollar]
+    t   = tax_rate
+    tax = t.minimum_tax + (annual_income - t.lower_limit_of_the_range) * t.tax_per_extra_dollar
   end
 
   private
@@ -27,10 +29,10 @@ class IncomeTaxCalculator
     r = [17547, 0.370, 80000]  if (80001  <= annual_income) && (annual_income <= 180000)
     r = [54547, 0.450, 180000] if (180001 <= annual_income)
 
-    {
+    OpenStruct.new(
       minimum_tax: r[0],
-      tax_per_extra_dollar: r[1]
+      tax_per_extra_dollar: r[1],
       lower_limit_of_the_range: r[2]
-    }
+    )
   end
 end
