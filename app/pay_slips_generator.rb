@@ -18,7 +18,7 @@ class PaySlipsGenerator
     OpenStruct.new(
       first_name:         row[0],
       last_name:          row[1],
-      annual_salary:      string_to_float(rows[2]),
+      annual_salary:      string_to_float(row[2]),
       super_rate:         percentage_to_rate(row[3]),
       payment_date_range: row[4]
     )

@@ -5,14 +5,10 @@ class CsvExporter
   end
 
   def export
-    open(@file, 'w') do |f|
-      write_csv @rows, f
+    CSV.open(@file, "wb") do |csv|
+      @rows.each do |row|
+        csv << row
+      end
     end
-  end
-
-  private
-
-  def write_csv(rows, file)
-    CSV.dump(rows, file)
   end
 end
