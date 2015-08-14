@@ -38,5 +38,5 @@ How to use
 1. It is a Ruby project and hence you would need to install ruby first. 
 2. Clone the repository to your local machine.
 3. run ```bundle install``` in the root folder of the app to install the dependencies.
-4. To run the application: ```ruby app/main.rb sample/myob_employees.csv```
+4. To run the application: ```ruby app/main.rb sample/myob_employees.csv```. Output file will be generated in the same folder as the input file with .output added to the filename.
 5. To run the test suite: ```rspec spec/*```
