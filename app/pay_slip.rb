@@ -24,8 +24,6 @@ class PaySlip
     ]
   end
 
-  private
-
   def gross_income
     round employee.annual_salary/12
   end
@@ -42,6 +40,7 @@ class PaySlip
     round gross_income * super_rate
   end
 
+  private
 
   # 1.4.round  #=> 1
   # 1.5.round  #=> 2

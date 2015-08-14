@@ -37,10 +37,11 @@ Here is the csv input and output format we provide. (But feel free to use any fo
 Input (first name, last name, annual salary, super rate (%), payment start date):
 David,Rudd,60050,9%,01 March – 31 March
 Ryan,Chen,120000,10%,01 March – 31 March
- 
+
 Output (name, pay period, gross income, income tax, net income, super):
 David Rudd,01 March – 31 March,5004,922,4082,450
 Ryan Chen,01 March – 31 March,10000,2696,7304,1000
+
  
 As part of your solution:
 •       List any assumptions that you have made in order to solve this problem.
