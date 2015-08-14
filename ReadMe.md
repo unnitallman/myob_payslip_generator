@@ -1,7 +1,7 @@
 Employee monthly payslip
 ========================
  
-Given an employee's details - first name, last name, annual salary(positive integer)and super rate(0% - 50% inclusive), payment start date, the program should generate payslip information with name, pay period,  gross income, income tax, net income and super.
+Given an employee's details - first name, last name, annual salary(positive integer),super rate(0% - 50% inclusive) and payment start date, the program should generate payslip information with name, pay period, gross income, income tax, net income and super.
  
 The calculation details will be the following:
 •       pay period = per calendar month
@@ -17,16 +17,19 @@ Income tax to be calculated based on http://www.ato.gov.au/content/12333.htm
 Input CSV Format
 ----------------
 
-Input (first name, last name, annual salary, super rate (%), payment start date):
+Input (first name, last name, annual salary, super rate (%), payment start date)
 
 David,Rudd,60050,9%,01 March – 31 March
+
 Ryan,Chen,120000,10%,01 March – 31 March
 
 Output CSV Format
 -----------------
 
-Output (name, pay period, gross income, income tax, net income, super):
+Output (name, pay period, gross income, income tax, net income, super)
+
 David Rudd,01 March – 31 March,5004,922,4082,450
+
 Ryan Chen,01 March – 31 March,10000,2696,7304,1000
 
 How to use
